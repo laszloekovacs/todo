@@ -24,15 +24,15 @@ const addNewEntry = (text, targetElem) => {
 	checkbox.setAttribute('type', 'checkbox');
 
 	// assemble the final entry
-	task.append(paragraph);
 	task.append(checkbox);
+	task.append(paragraph);
 
 	targetElem.prepend(task);
 };
 
 // fired when pressing enter or the add button
 const handleEnter = (event) => {
-	if (event.code === 'Enter') {
+	if (event.code === 'Enter' || event.type === 'click') {
 		addNewEntry(taskDescription.value, tasks);
 		handleReset();
 	}

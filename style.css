@@ -1,0 +1,35 @@
+/*
+
+* {
+	border: 1px dotted orangered;
+}
+*/
+html {
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+li::before {
+	content: '🏆 ';
+}
+
+p {
+	margin: 0;
+	margin-left: 2em;
+}
+
+#taskDescription {
+	width: 20%;
+}
+
+button {
+	border: 0px;
+	border-radius: 0;
+	background-color: lightseagreen;
+	color: white;
+}
